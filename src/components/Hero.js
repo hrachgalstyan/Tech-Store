@@ -10,7 +10,7 @@ export default function Hero({img, title, max, children}) {
                 {children}
             </div>
         </HeroWrapper>
-    )
+    ) 
 }
 
 

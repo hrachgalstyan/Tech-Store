@@ -33,7 +33,7 @@ export default class Services extends Component {
                         {this.state.services.map(item => {
                             return (
                                 <div className="col-10 mx-auto col-sm-6 col-md-4 text-center my-3" key={item.id}>
-                                    <div className="service-icon">
+                                    <div className="service-icon" style={{fontSize: '60px'}}>
                                         {item.icon}
                                     </div>
                                     <div className="mt-3 text-capitalize">

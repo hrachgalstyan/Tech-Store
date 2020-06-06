@@ -54,7 +54,7 @@ export default function ProductFilter() {
                     <option value="htc">htc</option> */}
                     {companies.map((company, index) => {
                         return (
-                        <option key={index} value={company}>
+                        <option key={index} value={company} className="option">
                             {company}
                         </option>
                         );
@@ -63,7 +63,7 @@ export default function ProductFilter() {
                 </div>
                 {/* end of category search */}
                 {/* price range */}
-                <div>
+                <div className="d-flex flex-column align-items-center">
                     <label htmlFor="price">
                     <p className="mb-2">
                         product price : <span>$ {price}</span>
@@ -82,7 +82,7 @@ export default function ProductFilter() {
                 </div>
                 {/* end of  price range */}
                 {/* free shippping */}
-                <div>
+                <div className="d-flex align-items-center">
                     <label htmlFor="shipping" className="mx-2">
                     free shipping
                     </label>
@@ -111,15 +111,20 @@ const FilterWrapper = styled.div`
     grid-column-gap: 2rem;
     grid-row-gap: 1rem;
     label {
-    font-weight: bold;
-    text-transform: capitalize;
+        font-weight: bold;
+        text-transform: capitalize;
     }
     .filter-item,
     .filter-price {
-    display: block;
-    width: 100%;
-    background: transparent;
-    border-radius: 0.5rem;
-    border: 2px solid var(--darkGrey);
+        display: block;
+        width: 100%;
+        height: 40px;
+        border-radius: 0.5rem;
+        border: 2px solid var(--primaryColor);
+        outline: none;
+        text-decoration: none;
+    }
+    .option{
+        padding: 10px;
     }
 `;
